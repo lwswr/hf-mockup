@@ -67,11 +67,25 @@ const Message = styled.textarea`
   width: 88.5%;
   padding: 1rem;
   margin: 1rem 1rem;
-  height: 50%;
+  height: 40%;
   font-family: "Montserrat";
   font-size: 1rem;
   border: none;
   border-radius: 0.5rem;
+`;
+
+const Button = styled.button`
+  background: rgb(81, 120, 130);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-size: 1.25rem;
+  color: white;
+  transition: 0.5s;
+  :hover {
+    background: rgb(54, 80, 87);
+  }
+  font-family: "Montserrat";
 `;
 
 export const Contact = () => {
@@ -80,11 +94,12 @@ export const Contact = () => {
       <Title>CONTACT US</Title>
       <Form>
         <NameInputs>
-          <NameInput type="text" />
-          <NameInput type="text" />
+          <NameInput type="text" placeholder="First Name" />
+          <NameInput type="text" placeholder="Last Name" />
         </NameInputs>
-        <EmailInput type="email" />
-        <Message />
+        <EmailInput type="email" placeholder="Email Address" />
+        <Message placeholder="Your Message..." />
+        <Button>Submit</Button>
       </Form>
     </ContactCon>
   );
